@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [repository URL]()
-- Live Site URL: [live URL]()
+- Solution URL: [repository URL](https://github.com/saramx-dev/Social-links-profile)
+- Live Site URL: [live URL](https://saramx-dev.github.io/Social-links-profile/)
 
 ## My process
 
