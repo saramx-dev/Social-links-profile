@@ -48,7 +48,7 @@ a {
   }
 
   .social-links {
-    @apply space-y-3;
+    @apply space-y-4;
   }
 
   .social-links li {
