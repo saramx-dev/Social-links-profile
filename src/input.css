@@ -32,7 +32,7 @@ a {
 
 @layer components {
   .profile {
-    @apply w-full max-w-[400px] mx-auto bg-grey-8  p-6 md:p-8 rounded-2xl shadow-lg;
+    @apply w-full max-w-[380px] mx-auto bg-grey-8  p-6 md:p-8 rounded-2xl shadow-lg;
   }
 
   .profile-img {
@@ -44,7 +44,7 @@ a {
   }
 
   .profile-bio {
-    @apply text-gray-200 mb-5 text-[clamp(0.75rem,1vw+0.25rem,0.875rem)];
+    @apply mb-5  text-[14px] px-4; 
   }
 
   .social-links {
