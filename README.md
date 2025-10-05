@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/screencapture.png)
+![](./design/screencapture-desktop.png)
 
 
 ### Links

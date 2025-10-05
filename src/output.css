@@ -12,8 +12,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --font-weight-medium: 500;
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --leading-normal: 1.5;
     --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
@@ -26,6 +26,7 @@
     --color-grey-8: hsl(0, 0%, 12%);
     --color-grey-9: hsl(0, 0%, 8%);
     --color-Green: hsl(75, 94%, 57%);
+    --font-fontFamily: "Inter", sans-serif;
   }
 }
 @layer base {
@@ -177,17 +178,8 @@
   }
 }
 @layer utilities {
-  .static {
-    position: static;
-  }
-  .contents {
-    display: contents;
-  }
   .grid {
     display: grid;
-  }
-  .table {
-    display: table;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -204,6 +196,9 @@
   .text-center {
     text-align: center;
   }
+  .font-fontFamily {
+    font-family: var(--font-fontFamily);
+  }
   .text-\[14px\] {
     font-size: 14px;
   }
@@ -211,16 +206,8 @@
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
   }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
-  }
   .text-white {
     color: var(--color-white);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
 }
 @layer base {
@@ -230,8 +217,8 @@
   }
   h1 {
     font-size: clamp(1.25rem, 2vw + 0.5rem, 1.5rem);
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
     color: var(--color-amber-50);
   }
   ul {
@@ -243,6 +230,8 @@
     display: block;
     border-radius: var(--radius-lg);
     padding-block: calc(var(--spacing) * 2);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
     color: var(--color-white);
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -270,15 +259,14 @@
 }
 @layer components {
   .profile {
-    max-width: 320px;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 400px;
     border-radius: var(--radius-2xl);
     background-color: var(--color-grey-8);
     padding: calc(var(--spacing) * 6);
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    @media (width >= 48rem) {
-      max-width: 380px;
-    }
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 8);
     }
@@ -321,11 +309,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -410,7 +393,6 @@
     *, ::before, ::after, ::backdrop {
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-shadow: 0 0 #0000;
